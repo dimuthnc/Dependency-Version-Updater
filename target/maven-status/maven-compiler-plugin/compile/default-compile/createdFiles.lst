@@ -1,0 +1,8 @@
+com/wso2/Model/Product.class
+com/wso2/Model/Report.class
+com/wso2/App.class
+com/wso2/Model/Dependency.class
+com/wso2/Constants.class
+com/wso2/Model/Dashboard.class
+com/wso2/Model/OutdatedDependency.class
+com/wso2/ProductRetrieve/GithubConnector.class
