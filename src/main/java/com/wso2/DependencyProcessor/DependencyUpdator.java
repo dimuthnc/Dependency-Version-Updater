@@ -17,16 +17,16 @@
  *
  */
 
-package com.wso2;
+package com.wso2.DependencyProcessor;
 
-public class Constants {
 
-    public static final String ROOT_PATH = "/home/dimuth/Documents/Dependency-Management/";
-    public static final String POM_NAME = "pom.xml";
-    public static final String GROUP_ID ="org.wso2";
-    public static final String GET_LATEST_VERSION_URL=  "http://localhost:9094/aethermicroservice/getLatest";
-    public static final String EMPTY_STRING=  "";
-    public static final String CONFIG_FILE_NAME="config.xml";
-    public static final String GET_VERSION_LIST = "http://localhost:9094/aethermicroservice/getVersions";
+import org.apache.maven.model.Dependency;
 
+/**
+ * TODO:Class level comment
+ */
+public  abstract class DependencyUpdator {
+
+    public abstract boolean canHandle(Dependency dependency);
+    public abstract Dependency handle(Dependency dependency);
 }

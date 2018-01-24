@@ -1,72 +1,67 @@
+/*
+ * Copyright (c) 2018, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *
+ */
+
 package com.wso2.DependencyProcessor;
 
 import com.wso2.Constants;
-import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.maven.model.Dependency;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.*;
-import java.net.*;
+import java.util.ArrayList;
+
 
 public class MavenCentralConnector {
-
-
-    public static void getLatestVersion(){
-
-
+    public static String getLatestVersion(Dependency dependency){
 
         try {
-
-
-
-
-
-
-
-
-
-            String data =
-                    "\"groupID\": \"org.wso2.andes.wso2\", " +
-                    "\"artifactID\": \"andes-client\" ";
+            String data ="{"+"groupID:"+dependency.getGroupId()+","+"artifactID:"+dependency.getArtifactId()+"}";
             StringEntity entity = new StringEntity(data,
                     ContentType.APPLICATION_JSON);
-
             HttpClient httpClient = HttpClientBuilder.create().build();
-            HttpPost request = new HttpPost("http://localhost:9094/mavencentralaetherService/getLatest/");
+            HttpPost request = new HttpPost(Constants.GET_LATEST_VERSION_URL);
             request.setEntity(entity);
-
             HttpResponse response = httpClient.execute(request);
-            System.out.println(response.getStatusLine().getStatusCode());
-
-
-
-
-
-
-
-
-
-
-
-            BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
-            StringBuffer result = new StringBuffer();
-            String line = "";
-            while ((line = rd.readLine()) != null) {
-                result.append(line);
+            if(response.getStatusLine().getStatusCode()==404){
+                //System.out.println("Dependency Not Found for "+groupID+"  "+artifactID);
             }
+            else{
 
-            //JSONObject o = new JSONObject(result.toString());
-            System.out.println(result);
+                BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8"));
+                StringBuilder result = new StringBuilder();
+                String line;
+                while ((line = rd.readLine()) != null) {
+                    result.append(line);
+                }
+
+                JSONObject jsonObject = new JSONObject(result.toString());
+                rd.close();
+                return jsonObject.getString("NewestVersion");
+            }
 
 
 
@@ -76,52 +71,54 @@ public class MavenCentralConnector {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
-
+        return Constants.EMPTY_STRING;
     }
 
-
-    public static void testServer(){
-
+    public static ArrayList<String> getVersionList(Dependency dependency){
         try {
 
-
-
-
-
-
-
-
-
-
-
+            String data ="{"+"groupID:"+dependency.getGroupId()+","+"artifactID:"+dependency.getArtifactId()+"}";
+            StringEntity entity = new StringEntity(data,
+                    ContentType.APPLICATION_JSON);
             HttpClient httpClient = HttpClientBuilder.create().build();
-            HttpGet request = new HttpGet("http://localhost:9094/mavencentralaetherService/test");
-
+            HttpPost request = new HttpPost(Constants.GET_VERSION_LIST);
+            request.setEntity(entity);
             HttpResponse response = httpClient.execute(request);
-            System.out.println(response.getStatusLine().getStatusCode());
-
-
-
-
-
-
-
-
-
-
-
-            BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
-            StringBuffer result = new StringBuffer();
-            String line = "";
-            while ((line = rd.readLine()) != null) {
-                result.append(line);
+            if(response.getStatusLine().getStatusCode()==404){
+                //System.out.println("Dependency Not Found for "+groupID+"  "+artifactID);
             }
+            else{
 
-            //JSONObject o = new JSONObject(result.toString());
-            System.out.println(result);
+                BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8"));
+                StringBuilder result = new StringBuilder();
+                String line;
+                while ((line = rd.readLine()) != null) {
+                    result.append(line);
+                }
+
+                JSONObject jsonObject = new JSONObject(result.toString());
+                rd.close();
+                ArrayList<String> versions = new ArrayList<String>();
+                JSONArray versionList = jsonObject.getJSONArray("AvailableVersions");
+
+
+                boolean newerVersionFound = false;
+                for (int index = 0; index < versionList.length(); index++) {
+                    String version = versionList.optString(index);
+                    if(version.equals(dependency.getVersion())){
+                        newerVersionFound =true;
+                    }
+                    if(newerVersionFound){
+                        versions.add(version);
+                    }
+
+                }
+                return versions;
+            }
 
 
 
@@ -131,31 +128,11 @@ public class MavenCentralConnector {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-
-
-    }
-
-
-    private static String convertStreamToString(InputStream is) {
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-        StringBuilder sb = new StringBuilder();
-
-        String line = null;
-        try {
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-        } catch (IOException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
-        return sb.toString();
+        return new ArrayList<String>();
+
     }
+
 }
