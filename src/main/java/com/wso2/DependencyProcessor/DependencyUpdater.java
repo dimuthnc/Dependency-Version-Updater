@@ -25,8 +25,7 @@ import org.apache.maven.model.Dependency;
 /**
  * TODO:Class level comment
  */
-public  abstract class DependencyUpdator {
+public  abstract class DependencyUpdater {
 
-    public abstract boolean canHandle(Dependency dependency);
-    public abstract Dependency handle(Dependency dependency);
+
 }

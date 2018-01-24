@@ -21,9 +21,8 @@ package com.wso2;
 
 import com.wso2.DependencyProcessor.POMReader;
 import com.wso2.DependencyProcessor.POMWriter;
-import com.wso2.DependencyProcessor.WSO2DependencyUpdator;
+import com.wso2.DependencyProcessor.WSO2DependencyUpdater;
 import com.wso2.ProductBuilder.MavenInvoker;
-import org.apache.maven.model.Dependency;
 import org.apache.maven.model.Model;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -34,8 +33,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -43,16 +40,13 @@ public class App {
     static String MAVEN_HOME;
     public static void main( String[] args ) {
         readConfigFile();
-        String repositoryName ="product-apim";
+        String repositoryName ="message broker";
         String  projectPomPath = Constants.ROOT_PATH+repositoryName;
-        System.out.println(projectPomPath);
         ArrayList<Model> modelList = new ArrayList<Model>();
 
         POMReader pomReader = new POMReader();
         POMWriter pomWriter = new POMWriter();
-        WSO2DependencyUpdator wso2DependencyUpdator = new WSO2DependencyUpdator();
-
-
+        WSO2DependencyUpdater wso2DependencyUpdater = new WSO2DependencyUpdater();
 
 
         Model model=pomReader.getPomModel(projectPomPath);
@@ -68,29 +62,30 @@ public class App {
         Model updatedRootModel = new Model();
         for (Model childModel : modelList) {
 
-            Model updatedModel = wso2DependencyUpdator.updateModel(childModel,properties);
+            Model updatedModel = wso2DependencyUpdater.updateModel(childModel,properties);
 
             if(!childModel.getProjectDirectory().toString().equals(projectPomPath)){
-                System.out.println(childModel.getProjectDirectory().toString());
+
                 propertiesList.add(updatedModel.getProperties());
                 updatedModel.setProperties(new Properties());
                 pomWriter.writePom(updatedModel);
+
             }
             else{
-                System.out.println("model updated");
-                updatedRootModel = childModel;
+
+                propertiesList.add(updatedModel.getProperties());
+                updatedRootModel = updatedModel;
+
             }
         }
 
         for (Properties properties1 : propertiesList) {
             for (Object property : properties1.keySet()) {
-                //System.out.println("OLD VALUE "+properties.getProperty(property.toString())+" NEW VALUE  "+ properties1.getProperty(property.toString()));
                 properties.setProperty(property.toString(), properties1.getProperty(property.toString()));
 
             }
         }
         updatedRootModel.setProperties(properties);
-        System.out.println(model==updatedRootModel);
         pomWriter.writePom(updatedRootModel);
 
 
@@ -98,27 +93,7 @@ public class App {
 
 
 
-        //ArrayList<String> pomLocationList =POMReader.getAllPOMFiles(Constants.ROOT_PATH+repositoryName);
-
-//        for(int pomFileLocation =0; pomFileLocation<pomLocationList.size();pomFileLocation++){
-//            dependencies.addAll(POMReader.getAllDependencies(pomLocationList.get(pomFileLocation)));
-//
-//        }
-
-        //System.out.println(propertyMap);
-
-
-
-
-        //Product product = new Product("Test Project","https://github.com/dimuthnc/test-dependency-manager.git",Constants.ROOT_PATH+"Test Product");
-
-        //GithubConnector githubConnector = new GithubConnector();
-        //githubConnector.clone(product);
-        //githubConnector.update(product);
         MavenInvoker.mavenBuilder(MAVEN_HOME);
-        //MavenInvoker.mavenNewBuilder();
-        //MavenCentralConnector.testServer();
-        //MavenCentralConnector.getLatestVersion("org.wso2.andes.wso2","andes-client");
 
     }
 
