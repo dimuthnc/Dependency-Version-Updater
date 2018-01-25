@@ -17,27 +17,15 @@
  *
  */
 
-package com.wso2.Model;
+package org.wso2.DependencyProcessor;
 
-import java.util.ArrayList;
+import org.apache.maven.model.Model;
+import java.util.Properties;
 
-public class Dashboard {
-
-    private ArrayList<Report> reports;
-
-    public Dashboard() {
-        this.reports = new ArrayList<Report>();
-    }
-
-    public  boolean addReport(Report report){
-        try{
-            reports.add(report);
-            return true;
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-    }
+/**
+ * TODO:Class level comment
+ */
+public  abstract class DependencyUpdater {
+    public abstract Model updateModel(Model model, Properties properties);
 
 }

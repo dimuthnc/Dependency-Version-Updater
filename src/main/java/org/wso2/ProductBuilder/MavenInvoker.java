@@ -17,13 +17,11 @@
  *
  */
 
-package com.wso2.ProductBuilder;
+package org.wso2.ProductBuilder;
 
-import com.wso2.Constants;
-import org.apache.maven.Maven;
+import org.wso2.Constants;
 import org.apache.maven.cli.MavenCli;
 import org.apache.maven.shared.invoker.*;
-import sun.nio.cs.StandardCharsets;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -47,9 +45,9 @@ public class MavenInvoker {
         request.setOutputHandler(new InvocationOutputHandler() {
             public void consumeLine(String s) {
 
-                if(s.contains("[ERROR]")){
+                //if(s.contains("[ERROR]")){
                     System.out.println(s);
-                }
+                //}
             }
         });
         request.setGoals( Collections.singletonList( "install" ) );

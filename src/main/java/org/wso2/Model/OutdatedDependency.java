@@ -17,7 +17,7 @@
  *
  */
 
-package com.wso2.Model;
+package org.wso2.Model;
 
 import java.util.ArrayList;
 

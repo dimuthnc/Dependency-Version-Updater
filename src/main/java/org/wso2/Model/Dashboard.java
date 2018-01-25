@@ -17,16 +17,27 @@
  *
  */
 
-package com.wso2;
+package org.wso2.Model;
 
-public class Constants {
+import java.util.ArrayList;
 
-    public static final String ROOT_PATH = "/home/dimuth/Documents/Dependency-Management/";
-    public static final String POM_NAME = "pom.xml";
-    public static final String GROUP_ID ="org.wso2";
-    public static final String GET_LATEST_VERSION_URL=  "http://localhost:9094/aethermicroservice/getLatest";
-    public static final String EMPTY_STRING=  "";
-    public static final String CONFIG_FILE_NAME="config.xml";
-    public static final String GET_VERSION_LIST = "http://localhost:9094/aethermicroservice/getVersions";
+public class Dashboard {
+
+    private ArrayList<Report> reports;
+
+    public Dashboard() {
+        this.reports = new ArrayList<Report>();
+    }
+
+    public  boolean addReport(Report report){
+        try{
+            reports.add(report);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 
 }

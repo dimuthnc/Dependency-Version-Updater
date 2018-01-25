@@ -17,7 +17,7 @@
  *
  */
 
-package com.wso2.Model;
+package org.wso2.Model;
 
 public class Product {
     private String name;

@@ -17,23 +17,16 @@
  *
  */
 
-package com.wso2.Model;
+package org.wso2;
 
-import java.util.ArrayList;
+public class Constants {
 
-public class Report {
-    private ArrayList<String> outdatedDependencies;
+    public static final String ROOT_PATH = "/home/dimuth/Documents/DM-Root/";
+    public static final String POM_NAME = "pom.xml";
+    public static final String GROUP_ID ="org.wso2";
+    public static final String GET_LATEST_VERSION_URL=  "http://localhost:9094/aethermicroservice/getLatest";
+    public static final String EMPTY_STRING=  "";
+    public static final String CONFIG_FILE_NAME="config.xml";
+    public static final String GET_VERSION_LIST = "http://localhost:9094/aethermicroservice/getVersions";
 
-    public ArrayList<String> getOutdatedDependencies() {
-        return outdatedDependencies;
-    }
-
-    public void setOutdatedDependencies(ArrayList<String> outdatedDependencies) {
-        this.outdatedDependencies = outdatedDependencies;
-    }
-
-    public Report(ArrayList<String> outdatedDependencies) {
-
-        this.outdatedDependencies = outdatedDependencies;
-    }
 }

@@ -17,9 +17,9 @@
  *
  */
 
-package com.wso2.DependencyProcessor;
+package org.wso2.DependencyProcessor;
 
-import com.wso2.Constants;
+import org.wso2.Constants;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -31,6 +31,7 @@ import org.apache.maven.model.Dependency;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.*;
 import java.util.ArrayList;
 

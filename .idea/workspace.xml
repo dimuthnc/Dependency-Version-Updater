@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915de415-2501-4170-84b8-5632ed2ce5e2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_wso2_json_2_0_0_wso2v1.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/Dependency.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java" afterPath="$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java" />
+      <change beforePath="$PROJECT_DIR$/Dependancy-Version-Updater.iml" afterPath="$PROJECT_DIR$/Dependancy-Version-Updater.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/App.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Constants.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMWriter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdater.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/Dashboard.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/LatestVersionJSON.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/Product.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/Model/Report.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/wso2/AppTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.wso2.AppTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.wso2.AppTest.xml" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.wso2.AppTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.wso2.AppTest.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,20 +38,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MavenInvoker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/ProductBuilder/MavenInvoker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            <state relative-caret-position="425">
+              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
               <folding>
-                <element signature="e#0#2964#0" expanded="true" />
+                <element signature="e#0#2901#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#1336#1548#0" expanded="true" />
+                <element signature="e#1547#1548#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Report.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Report.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Report.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -49,10 +67,10 @@
         </entry>
       </file>
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Product.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="e#0#1409#0" expanded="true" />
               </folding>
@@ -63,46 +81,53 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="162">
+              <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MavenCentralConnector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/MavenCentralConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="61" column="74" lean-forward="false" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
               <folding>
-                <element signature="e#0#5101#0" expanded="true" />
+                <element signature="e#0#5102#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GithubConnector.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java">
+      <file leaf-file-name="GithubConnector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/ProductRetrieve/GithubConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state relative-caret-position="558">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="e#0#1828#0" expanded="true" />
+                <element signature="e#0#1822#0" expanded="true" />
+                <element signature="e#1789#1790#0" expanded="true" />
+                <element signature="e#1816#1817#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/App.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="1151">
+              <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
               <folding>
-                <element signature="e#0#3993#0" expanded="true" />
+                <element signature="e#0#6473#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#2248#2255#0" expanded="true" />
+                <element signature="e#2860#2872#0" expanded="true" />
+                <element signature="e#4084#4100#0" expanded="true" />
+                <element signature="e#5071#5087#0" expanded="true" />
+                <element signature="e#5434#5450#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,12 +217,12 @@
         </entry>
       </file>
       <file leaf-file-name="POMWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMWriter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/POMWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="501">
+              <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding>
-                <element signature="e#0#1792#0" expanded="true" />
+                <element signature="e#0#1657#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -205,12 +230,12 @@
         </entry>
       </file>
       <file leaf-file-name="POMReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/POMReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
-              <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
-                <element signature="e#0#1691#0" expanded="true" />
+                <element signature="e#0#1693#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -218,7 +243,7 @@
         </entry>
       </file>
       <file leaf-file-name="DependencyUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/DependencyUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
@@ -229,13 +254,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WSO2DependencyUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdater.java">
+      <file leaf-file-name="WSO2DependencyUpdater.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/WSO2DependencyUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="63" />
+            <state relative-caret-position="122">
+              <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
               <folding>
-                <element signature="e#0#4624#0" expanded="true" />
+                <element signature="e#0#7285#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -305,7 +330,7 @@
         </entry>
       </file>
       <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Dashboard.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
@@ -317,9 +342,9 @@
         </entry>
       </file>
       <file leaf-file-name="OutdatedDependency.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/OutdatedDependency.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="355">
               <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
               <folding>
                 <element signature="e#0#1326#0" expanded="true" />
@@ -359,10 +384,10 @@
         </entry>
       </file>
       <file leaf-file-name="LatestVersionJSON.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/LatestVersionJSON.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/LatestVersionJSON.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="e#0#1174#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -372,12 +397,12 @@
         </entry>
       </file>
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="414">
+              <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
               <folding>
-                <element signature="e#0#1252#0" expanded="true" />
+                <element signature="e#0#1238#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -414,26 +439,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/Report.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/LatestVersionJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/Dependency.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdater.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wso2/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyLocalUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/WSO2DependencyUpdater.java" />
       </list>
     </option>
   </component>
@@ -547,6 +574,19 @@
               <item name="wso2" type="462c0819:PsiDirectoryNode" />
               <item name="ProductRetrieve" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Dependancy-Version-Updater" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dependancy-Version-Updater" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dependancy-Version-Updater" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dependancy-Version-Updater" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -559,7 +599,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleTorrentClient/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Dependency-Management/product-is" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -715,7 +755,7 @@
       <workItem from="1516641122929" duration="429000" />
       <workItem from="1516680511681" duration="12210000" />
       <workItem from="1516765552068" duration="17344000" />
-      <workItem from="1516851648864" duration="1777000" />
+      <workItem from="1516851648864" duration="15169000" />
     </task>
     <task id="LOCAL-00001" summary="Automatic update for dependencyManagement dependencies for root pom.xml">
       <created>1516794518729</created>
@@ -728,7 +768,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146503000" />
+    <option name="totallyTimeSpent" value="159895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,8 +780,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="34" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="56" y="-4" width="1865" height="1085" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -762,8 +801,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28900525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3340314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26806283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28453496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -791,23 +830,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#5101#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/ProductRetrieve/GithubConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#0#1828#0" expanded="true" />
+            <element signature="e#0#1822#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -827,55 +857,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Dashboard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Report.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
-            <element signature="e#0#1252#0" expanded="true" />
+            <element signature="e#0#1238#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/POMReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
           <folding>
-            <element signature="e#0#1691#0" expanded="true" />
+            <element signature="e#0#1693#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3993#0" expanded="true" />
+            <element signature="e#0#6473#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2248#2255#0" expanded="true" />
+            <element signature="e#2860#2872#0" expanded="true" />
+            <element signature="e#4084#4100#0" expanded="true" />
+            <element signature="e#5071#5087#0" expanded="true" />
+            <element signature="e#5434#5450#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -887,23 +922,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding>
-            <element signature="e#0#1252#0" expanded="true" />
+            <element signature="e#0#1238#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3993#0" expanded="true" />
+            <element signature="e#0#6473#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2248#2255#0" expanded="true" />
+            <element signature="e#2860#2872#0" expanded="true" />
+            <element signature="e#4084#4100#0" expanded="true" />
+            <element signature="e#5071#5087#0" expanded="true" />
+            <element signature="e#5434#5450#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -915,12 +955,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding>
-            <element signature="e#0#1252#0" expanded="true" />
+            <element signature="e#0#1238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1038,16 +1078,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Report.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -1059,18 +1091,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/LatestVersionJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#1174#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Dashboard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
@@ -1140,27 +1161,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/OutdatedDependency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#1326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#1409#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wso2/AppTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/wso2/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
@@ -1246,16 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/Model/Dependency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1264,29 +1255,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/MavenCentralConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#5101#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/WSO2DependencyUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#4624#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyUpdater.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/DependencyUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
@@ -1296,56 +1265,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="e#0#1792#0" expanded="true" />
+            <element signature="e#0#1409#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/LatestVersionJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#1174#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/POMReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Model/OutdatedDependency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#1326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/POMReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
-            <element signature="e#0#1691#0" expanded="true" />
+            <element signature="e#0#1693#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/ProductBuilder/MavenInvoker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/MavenCentralConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        <state relative-caret-position="270">
+          <caret line="61" column="74" lean-forward="false" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
           <folding>
-            <element signature="e#0#2964#0" expanded="true" />
+            <element signature="e#0#5102#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/App.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
           <folding>
-            <element signature="e#0#3993#0" expanded="true" />
+            <element signature="e#0#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/POMWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#1657#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/ProductRetrieve/GithubConnector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/ProductBuilder/MavenInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
-            <element signature="e#0#1828#0" expanded="true" />
+            <element signature="e#0#2901#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1336#1548#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wso2/DependencyProcessor/DependencyLocalUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/ProductRetrieve/GithubConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1822#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1151">
+          <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#6473#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2248#2255#0" expanded="true" />
+            <element signature="e#2860#2872#0" expanded="true" />
+            <element signature="e#4084#4100#0" expanded="true" />
+            <element signature="e#5071#5087#0" expanded="true" />
+            <element signature="e#5434#5450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/DependencyProcessor/WSO2DependencyUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#7285#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

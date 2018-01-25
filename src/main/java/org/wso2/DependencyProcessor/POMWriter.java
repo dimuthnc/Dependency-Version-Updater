@@ -16,39 +16,37 @@
  * under the License.
  *
  */
-package com.wso2.DependencyProcessor;
+package org.wso2.DependencyProcessor;
 
-import com.wso2.Constants;
+import org.wso2.Constants;
 import org.apache.maven.model.Model;
-import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.model.io.xpp3.MavenXpp3Writer;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.WriterFactory;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Writer;
 
 /**
  * TODO:Class level comment
  */
 public class POMWriter {
-    public void writePom(Model updatedModel){
+    public boolean writePom(Model updatedModel){
         MavenXpp3Writer mavenXpp3Writer = new MavenXpp3Writer();
 
         Writer fileWriter = null;
         try{
-            File pomFile = new File(updatedModel.getProjectDirectory().getAbsolutePath()+File.separator+Constants.POM_NAME);
+            File pomFile = new File(updatedModel.getProjectDirectory().getAbsolutePath()+File.separator+ Constants.POM_NAME);
             fileWriter = WriterFactory.newXmlWriter(pomFile);
             mavenXpp3Writer.write(fileWriter, updatedModel);
+            return true;
 
         } catch (IOException e){
             e.printStackTrace();
         } finally{
             IOUtil.close(fileWriter);
         }
+        return false;
     }
 }

@@ -17,15 +17,23 @@
  *
  */
 
-package com.wso2.DependencyProcessor;
+package org.wso2.Model;
 
-import org.apache.maven.model.Model;
-import java.util.Properties;
+import java.util.ArrayList;
 
-/**
- * TODO:Class level comment
- */
-public  abstract class DependencyUpdater {
-    public abstract Model updateModel(Model model, Properties properties);
+public class Report {
+    private ArrayList<String> outdatedDependencies;
 
+    public ArrayList<String> getOutdatedDependencies() {
+        return outdatedDependencies;
+    }
+
+    public void setOutdatedDependencies(ArrayList<String> outdatedDependencies) {
+        this.outdatedDependencies = outdatedDependencies;
+    }
+
+    public Report(ArrayList<String> outdatedDependencies) {
+
+        this.outdatedDependencies = outdatedDependencies;
+    }
 }

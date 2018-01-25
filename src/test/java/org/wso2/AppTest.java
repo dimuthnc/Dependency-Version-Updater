@@ -1,4 +1,4 @@
-package com.wso2;
+package org.wso2;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

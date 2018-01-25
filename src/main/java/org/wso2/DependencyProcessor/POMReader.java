@@ -17,12 +17,13 @@
  *
  */
 
-package com.wso2.DependencyProcessor;
+package org.wso2.DependencyProcessor;
 
-import com.wso2.Constants;
+import org.wso2.Constants;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,7 +35,7 @@ public class POMReader {
 
 
     public Model getPomModel(String path){
-        File pomFile = new File(path+File.separator+Constants.POM_NAME);
+        File pomFile = new File(path+File.separator+ Constants.POM_NAME);
         InputStreamReader reader;
         Model model = new Model();
         MavenXpp3Reader mavenReader = new MavenXpp3Reader();

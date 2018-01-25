@@ -17,14 +17,12 @@
  *
  */
 
-package com.wso2.ProductRetrieve;
+package org.wso2.ProductRetrieve;
 
-import com.wso2.Constants;
-import com.wso2.Model.Product;
+import org.wso2.Constants;
+import org.wso2.Model.Product;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.lib.Repository;
-import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 
 
 import java.io.File;
@@ -34,6 +32,9 @@ import java.io.IOException;
 public class GithubConnector {
 
     Git git;
+
+
+
 
     public boolean update(Product product){
         boolean status =false;
@@ -52,15 +53,20 @@ public class GithubConnector {
         return status;
     }
 
-    public String clone(Product product){
-        try {
+    public boolean clone(Product product){
+        boolean status = false;
 
-            git =Git.cloneRepository().setURI(product.getUrl()).setDirectory(new File(product.getSubdirectory())).call();
-            git.close();
+        try {
+            git = Git.cloneRepository()
+                    .setURI( product.getUrl())
+                    .setDirectory(new File(Constants.ROOT_PATH+File.separator+product.getName())).call();
+            status = true;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return Constants.ROOT_PATH;
+
+        return status;
     }
 
     public boolean pullRequest(Product product){

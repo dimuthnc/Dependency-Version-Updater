@@ -17,9 +17,9 @@
  *
  */
 
-package com.wso2.DependencyProcessor;
+package org.wso2.DependencyProcessor;
 
-import com.wso2.Constants;
+import org.wso2.Constants;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.model.DependencyManagement;
 import org.apache.maven.model.Model;
@@ -44,20 +44,71 @@ public class WSO2DependencyUpdater extends DependencyUpdater {
 
         if(model.getDependencyManagement()!=null){
 
-            Model  dependencyManagementModel = updateToLatest(model.getDependencyManagement().getDependencies(),properties,localProperties);
+            //Model  dependencyManagementModel = updateToLatest(model.getDependencyManagement().getDependencies(),properties,localProperties);
+            Model  dependencyManagementModel = updateToLatestInLocation(model.getDependencyManagement().getDependencies(),properties,localProperties);
 
             DependencyManagement dependencyManagement =newModel.getDependencyManagement();
             dependencyManagement.setDependencies(dependencyManagementModel.getDependencies());
             newModel.setDependencyManagement(dependencyManagement);
             Properties managementProperties = dependencyManagementModel.getProperties();
 
-            for (Object property : managementProperties.keySet()) {
+            /*for (Object property : managementProperties.keySet()) {
 
                 newModel.addProperty(property.toString(),managementProperties.getProperty(property.toString()));
 
-            }
+            }*/
         }
         return newModel;
+    }
+    private Model updateToLatestInLocation(List<Dependency> dependencies, Properties globalProperties, Properties localProperties){
+        Model model = new Model();
+        List<Dependency> updatedDependencies = new ArrayList<Dependency>();
+        List<Dependency> outdatedDependencies = new ArrayList<Dependency>();
+
+        for (Dependency dependency : dependencies) {
+
+            String currentVersion = dependency.getVersion();
+            String groupId = dependency.getGroupId();
+
+            if(groupId.contains("org.wso2")){
+
+                if(currentVersion != null && (currentVersion.startsWith("${") && currentVersion.endsWith("}"))){
+
+                    String versionKey = currentVersion.substring(2,currentVersion.length()-1);
+                    String version = globalProperties.getProperty(versionKey);
+
+                    if(version==null){
+
+                        version=localProperties.getProperty(versionKey);
+                    }
+
+                    String latestVersion = MavenCentralConnector.getLatestVersion(dependency);
+                    Dependency dependencyClone = dependency.clone();
+                    if(!latestVersion.equals(currentVersion)){
+                        System.out.println(dependency.getGroupId()+" : "+dependency.getArtifactId() +" updated from the version :"+ currentVersion+" to latest version :"+latestVersion);
+                        outdatedDependencies.add(dependency);
+                        dependencyClone.setVersion(version);
+                        updatedDependencies.add(dependencyClone);
+
+                    }
+                }
+                else if(currentVersion !=null ){
+                    Dependency dependencyClone = dependency.clone();
+                    String LatestVersion =MavenCentralConnector.getLatestVersion(dependency);
+                    if(!LatestVersion.equals(currentVersion)){
+                        System.out.println(dependency.getGroupId()+" : "+dependency.getArtifactId() +" updated from the version :"+ currentVersion+" to latest version :"+LatestVersion);
+                        outdatedDependencies.add(dependency);
+                        dependencyClone.setVersion(LatestVersion);
+                        updatedDependencies.add(dependencyClone);
+
+                    }
+                }
+            }
+        }
+        dependencies.removeAll(outdatedDependencies);
+        dependencies.addAll(updatedDependencies);
+        model.setDependencies(dependencies);
+        return model;
     }
 
     private Model updateToLatest(List<Dependency> dependencies, Properties globalProperties, Properties localProperties) {
