@@ -19,13 +19,13 @@
 
 package com.wso2.DependencyProcessor;
 
-
-import org.apache.maven.model.Dependency;
+import org.apache.maven.model.Model;
+import java.util.Properties;
 
 /**
  * TODO:Class level comment
  */
 public  abstract class DependencyUpdater {
-
+    public abstract Model updateModel(Model model, Properties properties);
 
 }

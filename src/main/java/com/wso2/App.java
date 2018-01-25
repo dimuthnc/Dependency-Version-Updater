@@ -33,6 +33,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -40,6 +41,7 @@ public class App {
     static String MAVEN_HOME;
     public static void main( String[] args ) {
         readConfigFile();
+
         String repositoryName ="message broker";
         String  projectPomPath = Constants.ROOT_PATH+repositoryName;
         ArrayList<Model> modelList = new ArrayList<Model>();
@@ -93,7 +95,7 @@ public class App {
 
 
 
-        MavenInvoker.mavenBuilder(MAVEN_HOME);
+        MavenInvoker.mavenBuilder(MAVEN_HOME,repositoryName);
 
     }
 

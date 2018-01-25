@@ -21,7 +21,7 @@ package com.wso2.Model;
 
 import java.util.ArrayList;
 
-public class OutdatedDependency extends Dependency {
+public class OutdatedDependency extends org.apache.maven.model.Dependency {
     private String latestVersion;
     private ArrayList<String> newVersions;
 

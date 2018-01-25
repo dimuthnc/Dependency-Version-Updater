@@ -30,10 +30,7 @@ import java.io.InputStreamReader;
 
 
 public class POMReader {
-    static DependencyUpdater dependencyUpdater;
-    public POMReader(){
-        dependencyUpdater = new WSO2DependencyUpdater();
-    }
+
 
 
     public Model getPomModel(String path){

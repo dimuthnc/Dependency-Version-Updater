@@ -39,15 +39,15 @@ import java.util.Collections;
 public class MavenInvoker {
 
 
-    public static boolean mavenBuilder(String mavenHome){
+    public static boolean mavenBuilder(String mavenHome,String repositoryName){
 
         InvocationRequest request = new DefaultInvocationRequest();
-        request.setPomFile(new File(Constants.ROOT_PATH+File.separator+"This App"));
+        request.setPomFile(new File(Constants.ROOT_PATH+File.separator+repositoryName));
         //request.setShowErrors(true);
         request.setOutputHandler(new InvocationOutputHandler() {
             public void consumeLine(String s) {
 
-                if(s.contains("[ERROR]") && s.contains("org.slf4j")){
+                if(s.contains("[ERROR]")){
                     System.out.println(s);
                 }
             }

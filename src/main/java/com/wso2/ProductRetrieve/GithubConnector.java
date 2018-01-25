@@ -35,15 +35,11 @@ public class GithubConnector {
 
     Git git;
 
-
-
-
-
     public boolean update(Product product){
-
+        boolean status =false;
         try {
-            boolean Successful =Git.open(new File(product.getSubdirectory())).pull().call().isSuccessful();
-            System.out.println(Successful);
+            status =Git.open(new File(product.getSubdirectory())).pull().call().isSuccessful();
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -53,7 +49,7 @@ public class GithubConnector {
 
 
 
-        return true;
+        return status;
     }
 
     public String clone(Product product){
