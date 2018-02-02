@@ -50,7 +50,7 @@ public class MavenInvoker {
                 //}
             }
         });
-        request.setGoals( Collections.singletonList( "install" ) );
+        request.setGoals( Collections.singletonList( "clean install" ) );
         Invoker invoker = new DefaultInvoker();
         invoker.setMavenHome(new File(mavenHome));
 
