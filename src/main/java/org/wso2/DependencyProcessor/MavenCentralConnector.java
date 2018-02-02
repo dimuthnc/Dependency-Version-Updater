@@ -34,6 +34,7 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MavenCentralConnector {
@@ -90,7 +91,7 @@ public class MavenCentralConnector {
             request.setEntity(entity);
             HttpResponse response = httpClient.execute(request);
             if(response.getStatusLine().getStatusCode()==404){
-                //System.out.println("Dependency Not Found for "+groupID+"  "+artifactID);
+                //System.out.println("Dependency Not Found for "+dependency.getGroupId()+"  "+dependency.getArtifactId());
             }
             else{
 
@@ -110,14 +111,16 @@ public class MavenCentralConnector {
                 boolean newerVersionFound = false;
                 for (int index = 0; index < versionList.length(); index++) {
                     String version = versionList.optString(index);
-                    if(version.equals(dependency.getVersion())){
-                        newerVersionFound =true;
-                    }
+
                     if(newerVersionFound){
                         versions.add(version);
                     }
+                    if(version.equals(dependency.getVersion())){
+                        newerVersionFound =true;
+                    }
 
                 }
+
                 return versions;
             }
 
@@ -132,8 +135,11 @@ public class MavenCentralConnector {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         return new ArrayList<String>();
 
     }
+
+
 
 }
