@@ -19,11 +19,14 @@
 
 package org.wso2.Model;
 
+import org.apache.maven.model.Dependency;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class OutdatedDependency extends org.apache.maven.model.Dependency {
     private String latestVersion;
-    private ArrayList<String> newVersions;
+    private List<String> newVersions;
 
     public String getLatestVersion() {
         return latestVersion;
@@ -33,16 +36,23 @@ public class OutdatedDependency extends org.apache.maven.model.Dependency {
         this.latestVersion = latestVersion;
     }
 
-    public ArrayList<String> getNewVersions() {
+    public List<String> getNewVersions() {
         return newVersions;
     }
 
-    public void setNewVersions(ArrayList<String> newVersions) {
+    public void setNewVersions(List<String> newVersions) {
         this.newVersions = newVersions;
     }
 
     public OutdatedDependency() {
         super();
+
+    }
+
+    public OutdatedDependency(Dependency dependency){
+        this.setGroupId(dependency.getGroupId());
+        this.setArtifactId(dependency.getArtifactId());
+        this.setVersion(dependency.getVersion());
 
     }
 
