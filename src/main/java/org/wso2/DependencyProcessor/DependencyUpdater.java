@@ -26,6 +26,6 @@ import java.util.Properties;
  * TODO:Class level comment
  */
 public  abstract class DependencyUpdater {
-    public abstract Model updateModel(Model model, Properties properties);
+    public abstract Model updateModel(Model model, Properties properties, String pomLocation);
 
 }
