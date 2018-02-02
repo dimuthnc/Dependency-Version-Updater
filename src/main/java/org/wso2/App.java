@@ -28,12 +28,14 @@ import org.wso2.ProductRetrieve.GithubConnector;
 import org.apache.maven.model.Model;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+import org.wso2.ReportGenerator.UpdatedDependencyReporter;
 import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -55,12 +57,12 @@ public class App {
         }
 
 
-
-
     }
 
     private static boolean updateProductDependencies(String productName) {
-        boolean status = false;
+        boolean status;
+
+
         String  projectPomPath = Constants.ROOT_PATH+productName;
         ArrayList<Model> modelList = new ArrayList<Model>();
 
@@ -71,6 +73,7 @@ public class App {
 
         Model model=pomReader.getPomModel(projectPomPath);
         Properties properties =model.getProperties();
+        properties.setProperty("project.version",model.getVersion());
         List<String> modules =model.getModules();
         modelList.add(model);
 
@@ -81,13 +84,14 @@ public class App {
         ArrayList<Properties> propertiesList = new ArrayList<Properties>();
         Model updatedRootModel = new Model();
         for (Model childModel : modelList) {
+            String pomLocation = childModel.getProjectDirectory().toString();
 
-            Model updatedModel = wso2DependencyUpdater.updateModel(childModel,properties);
+            Model updatedModel = wso2DependencyUpdater.updateModel(childModel,properties,pomLocation);
 
             if(!childModel.getProjectDirectory().toString().equals(projectPomPath)){
 
-                propertiesList.add(updatedModel.getProperties());
-                updatedModel.setProperties(new Properties());
+                //propertiesList.add(updatedModel.getProperties());
+                //updatedModel.setProperties();
                 pomWriter.writePom(updatedModel);
 
             }
@@ -99,13 +103,15 @@ public class App {
             }
         }
 
-        /*for (Properties properties1 : propertiesList) {
+        for (Properties properties1 : propertiesList) {
             for (Object property : properties1.keySet()) {
                 properties.setProperty(property.toString(), properties1.getProperty(property.toString()));
 
             }
-        }*/
+        }
         updatedRootModel.setProperties(properties);
+
+        //System.out.println(properties.getProperty("carbon.kernel.version"));
         status =pomWriter.writePom(updatedRootModel);
         return status;
 
@@ -132,7 +138,13 @@ public class App {
 
     private static HashMap<String,String> getExistingRepos() {
         HashMap<String,String> projectRepoMap = new HashMap<String, String>();
-       // projectRepoMap.put("Message Broker","Message Broker");
+        //projectRepoMap.put("APIM","APIM");
+        projectRepoMap.put("product-apim","product-apim");
+        //projectRepoMap.put("DAS","DAS");
+        //projectRepoMap.put("SP","SP");
+        //projectRepoMap.put("EI","EI");
+        //projectRepoMap.put("Message Broker","Message Broker");
+        //projectRepoMap.put("Message Broker","Message Broker");
        // projectRepoMap.put("msf4j","msf4j");
        // projectRepoMap.put("API Manager","API Manager");
         return projectRepoMap;
@@ -140,9 +152,17 @@ public class App {
 
     private static HashMap<String,String> getAllProjectsFromDashboardDB() {
         HashMap<String,String> projectURLMap = new HashMap<String, String>();
-        projectURLMap.put("Message Broker","https://github.com/wso2/message-broker.git");
-        projectURLMap.put("msf4j","https://github.com/wso2/msf4j.git");
-        projectURLMap.put("API Manager","https://github.com/wso2/product-apim.git");
+        //projectURLMap.put("APIM","APIM");
+        projectURLMap.put("product-apim","product-apim");
+        //projectURLMap.put("APIM","APIM");
+        //projectURLMap.put("DAS","DAS");
+        //projectURLMap.put("SP","SP");
+        //projectURLMap.put("EI","EI");
+         // projectURLMap.put("Message Broker","https://github.com/wso2/message-broker.git");
+        //projectURLMap.put("Message Broker","https://github.com/wso2/message-broker.git");
+       // projectURLMap.put("Carbon API-Management","https://github.com/wso2/carbon-apimgt.git");
+       // projectURLMap.put("msf4j","https://github.com/wso2/msf4j.git");
+        //projectURLMap.put("API Manager","https://github.com/wso2/product-apim.git");
 
         return projectURLMap;
     }

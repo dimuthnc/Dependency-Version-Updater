@@ -21,12 +21,14 @@ package org.wso2;
 
 public class Constants {
 
-    public static final String ROOT_PATH = "/home/dimuth/Documents/DM-Root/";
+    public static final String ROOT_PATH = "/home/dimuth/Documents/DM-Root-2/";
     public static final String POM_NAME = "pom.xml";
     public static final String GROUP_ID ="org.wso2";
     public static final String GET_LATEST_VERSION_URL=  "http://localhost:9094/aethermicroservice/getLatest";
     public static final String EMPTY_STRING=  "";
     public static final String CONFIG_FILE_NAME="config.xml";
     public static final String GET_VERSION_LIST = "http://localhost:9094/aethermicroservice/getVersions";
+    public static final String CSV_DELIMITER = ",";
+    public static final String CSV_END_OF_LINE = "\n";
 
 }
